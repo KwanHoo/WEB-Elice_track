@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <title> 김관호의 포트폴리오</title>
+        <meta charset="UTF-8">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@100&display=swap" rel="stylesheet">
+ 
+        <style>
+            body{
+                background-color: #EAE2B7;
+            }
+            a{
+                color: #003049;
+                /* text-decoration: none; */
+            }
+            #title {
+                color: #DC4141;
+            }
+            h1{
+                border-bottom: 5px solid blueviolet;
+                padding: 15px;
+                font-size: 50px;
+                font-family: 'Work Sans', sans-serif;
+            }
+            h1 a {
+                text-decoration: none;
+            }
+            #content{
+                display: grid;
+                grid-template-columns: 400px 1fr;
+            }
+            
+        </style>
+    </head>
+    
+    <body>
+        <h1><a href="index.html" id="title">김관호의 포트폴리오!!!</a></h1>
+    
+        <div id="content">
+            <ol>
+                <li><a href="1.html">blog.naver.com/hwankko27</a></li>
+                <li><a href="2.html">github.com/KwanHoo/ImageProcessing</a></li>
+                <li><a href="3.html">github.com/KwanHoo/CNU_Brightling</a></li>
+            </ol>
+            <div>
+                <!-- unsplash.com -->
+                <img src="https://images.unsplash.com/photo-1546874177-9e664107314e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=869&q=80" alt="배경이미지" width=50% height=50%>
+                <!-- HTTP: Hyper Text Markup Language
+                Hyper Text : link를 나타냄-->
+                <br>
+                <p>저의 <strong>포트폴리오 <u>사이트</u></strong>에 오신 것을 환영합니다.</p>
+                
+            </div>
+            <div id="disqus"> <!--댓글_ 디스커스사이트!!-->
+                <div id="disqus_thread"></div>
+                <script>
+                    /**
+                    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+                    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+                    /*
+                    var disqus_config = function () {
+                    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+                    };
+                    */
+                    (function () { // DON'T EDIT BELOW THIS LINE
+                        var d = document, s = d.createElement('script');
+                        s.src = 'https://ai-4.disqus.com/embed.js';
+                        s.setAttribute('data-timestamp', +new Date());
+                        (d.head || d.body).appendChild(s);
+                    })();
+                </script>
+                <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by
+                        Disqus.</a></noscript>
+            </div>
+        </div>
+    </body>
+</html>
