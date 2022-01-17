@@ -1,0 +1,13 @@
+.transition {
+    transform: rotate(120deg);          /*회전*/
+    transform: scale(4, 5);             /*확대,축소*/
+    transform: skew(30deg, 40deg);      /*각도변경*/
+    transform: translate(240px, 300px); /*위치변경*/
+}
+
+.transition {
+    -webkit-transform: translate(200px, 200px); 
+    -moz-transform: translate(200px, 200px);            
+    -ms-transform: translate(200px, 200px);       
+    -o-transform: translate(200px, 200px); 
+}

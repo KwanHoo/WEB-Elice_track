@@ -1,0 +1,13 @@
+.transition{
+    transition-property: width;
+    transition-duration: 3s;
+    transition-timing-function: linear;
+    transition-delay: 4s;
+}
+
+.transition{
+    transition: width 3s linear 4s; /*한줄로 가능!*/
+}/* 먼저나오는 숫자가 duration*/
+/*숫자 1개인 경우 무조건 duration*/
+
+.transition:hover { width: 240px; }

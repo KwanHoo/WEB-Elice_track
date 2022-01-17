@@ -1,0 +1,8 @@
+h3 {
+    font-size: 30px;                /*글자크기*/
+    font-family: sans-serif;        /*글꼴*/
+    font-weight: bold;              /*글자두께*/
+    color: skyblue;                /*글자색깔*/
+    background-color: royalblue;    /*배경색*/
+    text-align: center;             /*글자정렬*/
+}
