@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <h1>Function</h1>
+        <script>
+            document.write('hello world');  // document: 객체, write : 함수
+            document.querySelector('body');
+            Math.floor(3.141592); // 3
+
+            console.log(10000 * 0.1);
+            
+            let 가격 = 10000;
+            let 부가세율 = 0.1;
+            let 세후 = 가격 * 부가세율;
+            console.log(세후);
+
+            // 가격 : 매개변수, paramerter, 입력값의 이름
+            //10000 : 인자, argument, 입력값
+            // 가격 * 부가세율 : 반환값, return value, 출력값
+            function 부가세계산기(가격, 부가세율){
+                return 가격 * 부가세율;
+            }
+            console.log(부가세계산기(2400, 0.1));
+            console.log(323000, 0.1);
+        </script>
+    </body>
+</html>
