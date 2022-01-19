@@ -6,21 +6,37 @@
     </head>
     <body>
         <header>
-            <h1><a href="index.html">환꼬 포토폴리오</a></h1> 
+            <h1><a href="index.html" id ="link1">환꼬 포토폴리오</a></h1> 
         </header>
         <input type="button" value="night" onclick="
+            // 만약 this.value가 dark라면
+            if (value === 'night') {
+            target.style.backgroundColor='black';
+            target.style.color='white';
+                //this.value를 day로 변경
+            this.value = 'day';
+            // 아니라면
+            } else{
+            target.style.backgroundColor='skyblue';
+            target.style.color='black';
+            this.value = 'night';
+
+            }
+                //this.value를 night로 변경
+        ">
+        <input type="button" value="DarkMode" onclick="
                     target.style.backgroundColor='black';
                     target.style.color='white';
                     ">
         
-        <input type="button" value="day" onclick="
+        <input type="button" value="LightMode" onclick="
                             target.style.backgroundColor='skyblue';
                             target.style.color='black';
                             ">
         
         <nav>
             <ol>
-                <li><a href="1.html">환꼬블로그</a></li>
+                <li><a href="1.html" id = "link2">환꼬블로그</a></li>
                 <li><a href="2.html">환꼬깃허브</a></li>
                 <li><a href="3.html">졸업프로젝트</a></li>
             </ol>
