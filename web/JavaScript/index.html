@@ -2,20 +2,21 @@
 <html>
     <head>
         <title>WEB</title>
+
     </head>
     <body>
         <header>
             <h1><a href="index.html">환꼬 포토폴리오</a></h1> 
         </header>
-                <input type="button" value="night" onclick="
-                            document.querySelector('body').style.backgroundColor='black';
-                            document.querySelector('body').style.color='white';
+        <input type="button" value="night" onclick="
+                    target.style.backgroundColor='black';
+                    target.style.color='white';
+                    ">
+        
+        <input type="button" value="day" onclick="
+                            target.style.backgroundColor='skyblue';
+                            target.style.color='black';
                             ">
-                
-                <input type="button" value="day" onclick="
-                                    document.querySelector('body').style.backgroundColor='skyblue';
-                                    document.querySelector('body').style.color='black';
-                                    ">
         
         <nav>
             <ol>
@@ -28,5 +29,8 @@
             <h2>환영합니다!!</h2>
             <p>예비 개발자 환꼬의 포토폴리오 입니다!!</p>
         </article>
+        <script>
+            let target = document.querySelector('body');
+        </script>
     </body>
 </html>
