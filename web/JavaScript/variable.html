@@ -14,5 +14,34 @@
             let d = 2;
             console.log(c+d);
         </script>
+
+        <h1> 변수의 효용</h1>
+        <script>
+            console.log(10000 * 0.1); 
+            // 주석 : JS가 없는샘 치는 도움말 같은거
+            // 10000 : 만원 , 0.1 : 부가가치세
+            // 주석을 안쓰고 변수명으로 설명하는게 더 좋은 방법
+            
+            // 부가가치세
+            let 금액 = 13500
+            let 부가세율 = 0.1;
+            console.log(금액 * 부가세율) ;
+        </script>
+        <h1>변수의 응용</h1>
+        <script>
+            let name = "환꼬";
+            console.log(name+name+'안녕하세요!!'+ name +'님 최고에욧!!');
+        </script>
+
+        // 요즘에 많이 쓰는 방법!!
+        <script>
+            let name0 ='환꼬꼬';
+            console.log(`${name0} + ${name0} + '안녕하세요!!' + ${name0} + '님 최고에욧!!`);
+        </script>
+        // 
+        <script>
+            let name1 = prompt('이름?');
+            console.log(`${name1} + ${name1} + '안녕하세요!!' + ${name1} + '님 최고에욧!!`);
+        </script>
     </body>
 </html>
