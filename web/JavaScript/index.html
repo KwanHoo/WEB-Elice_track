@@ -8,29 +8,35 @@
         <header>
             <h1><a href="index.html" id ="link1">환꼬 포토폴리오</a></h1> 
         </header>
-        <input type="button" value="night" onclick="
-            let target = document.querySelector('body');
-            let as = document.querySelectorAll('a');
-            // 만약 this.value가 dark라면
-            if (value === 'night') {
-                target.style.backgroundColor='black';
-                target.style.color='white';
-                //this.value를 day로 변경
-                this.value = 'day';
-                for (let i=0; i<as.length; i++){
-                    as[i].style.color = 'pink';
-                }
-            // 아니라면
-            } else{
-                target.style.backgroundColor='skyblue';
-                target.style.color='black';
-                this.value = 'night';
-                for (let i=0; i<as.length; i++){
-                    as[i].style.color = 'green';
-                }
+        <script>
+            function 주간야간토글(self){
+                let target = document.querySelector('body');
+                let as = document.querySelectorAll('a');
+                // 만약 this.value가 dark라면
+                if (self.value === 'night') {
+                    target.style.backgroundColor = 'black';
+                    target.style.color = 'white';
+                    //this.value를 day로 변경
+                    self.value = 'day';
+                    for (let i = 0; i < as.length; i++) {
+                        as[i].style.color = 'pink';
+                    }
+                    // 아니라면
+                } else {
+                    target.style.backgroundColor = 'skyblue';
+                    target.style.color = 'black';
+                    //this.value를 night로 변경
 
+                    self.value = 'night';
+                    for (let i = 0; i < as.length; i++) {
+                        as[i].style.color = 'green';
+                    }
+                }
             }
-                //this.value를 night로 변경
+        </script>
+
+        <input type="button" value="night" onclick="
+            주간야간토글(this);
         ">
         <input type="button" value="DarkMode" onclick="
                     target.style.backgroundColor='black';
@@ -53,8 +59,6 @@
             <h2>환영합니다!!</h2>
             <p>예비 개발자 환꼬의 포토폴리오 입니다!!</p>
         </article>
-        <script>
-            let target = document.querySelector('body');
-        </script>
+
     </body>
 </html>
