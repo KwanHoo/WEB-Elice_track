@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <h1>Loop</h1>
+        <script>
+            /*
+            for(초기화; 반복의 조건; 반복상태의 갱신){
+
+            }*/
+            let coffee = ['Americano', 'Caramel Macchiato', 'Dolce Latte']
+            let countingstter = coffee.length
+            for(let i = 0; i<countingstter; i = i+1){
+                console.log(i, coffee[i]);
+            }
+
+        </script>
+        <ul>
+            <script>
+                let coffee2 = ['Americano', 'Caramel Macchiato', 'Dolce Latte']
+                let countingstter2 = coffee.length
+                for (let j = 0; j < countingstter; j = j + 1) {
+                    document.write(`<li>${coffee2[j]}</li>`);
+                } 
+            </script>
+        </ul>
+    </body>
+</html>
