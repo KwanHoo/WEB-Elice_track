@@ -1,0 +1,40 @@
+@import "mobile.css";
+
+* {
+    box-sizing: border-box;
+}
+
+
+header{
+    /* background-image: url('beach.jpg');
+    background-repeat: no-repeat;
+    background-size: cover; */
+    text-align: center;
+    background-color: #FCBF49;
+}
+
+body {
+background-color: #FFEAC2;
+}
+
+a {
+color: #003049;
+/* text-decoration: none; */
+}
+
+#title {
+color: #DC4141;
+}
+
+h1 {
+border-bottom: 5px solid blueviolet;
+padding: 15px;
+font-size: 50px;
+font-family: 'Work Sans', sans-serif;
+}
+
+h1 a {
+text-decoration: none;
+}
+
+
