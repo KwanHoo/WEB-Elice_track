@@ -2,7 +2,7 @@
     position: fixed;
     width: 100%;
     height: 100%;
-    background-color: #1776F1;
+    background-color: #99ffcc;
     top: 0;
     left: 0;
     display: flex;
@@ -14,13 +14,13 @@
 }
 
 .bigScreen__text {
-    font-size: 32px;
+    font-size: 45px;
     font-weight: 700;
     line-height: 1.5;
-    color: white;
+    color: #003366;
 }
 
-@media screen and (min-width: 800px) {
+@media screen and (min-width: 870px){
     .bigScreen {
         display: flex;
     }

@@ -4,17 +4,25 @@
     box-sizing: border-box;
 }
 
-
+#imo{
+    border-style :solid;
+    border-width: medium;
+    border-color: #003049;
+    margin-left: 2.5em;
+}
 header{
     /* background-image: url('beach.jpg');
     background-repeat: no-repeat;
     background-size: cover; */
     text-align: center;
-    background-color: #FCBF49;
+     background-color: #9999ff;
 }
 
 body {
-background-color: #FFEAC2;
+background-color: #cce6ff;
+color:darkblue;
+font-family:  sans-serif;
+font-weight: bold;
 }
 
 a {
@@ -23,7 +31,7 @@ color: #003049;
 }
 
 #title {
-color: #DC4141;
+color: #cc0066;
 }
 
 h1 {
@@ -31,10 +39,32 @@ border-bottom: 5px solid blueviolet;
 padding: 15px;
 font-size: 50px;
 font-family: 'Work Sans', sans-serif;
+text-shadow: 3px 3px 6px thistle;
 }
 
 h1 a {
 text-decoration: none;
 }
 
+h2{
+    color:rgb(50, 50, 243);
+}
 
+.list{
+    list-style: none;
+}
+
+#img{
+    text-align: center;
+}
+#beach{
+    border-top-style :dotted;
+    border-right-style: solid;
+    border-bottom-style: dotted;
+    border-left-style: solid;
+    border-width: medium;
+    border-color: #003049;
+}
+p{
+    padding-left: 2.5em;
+}
