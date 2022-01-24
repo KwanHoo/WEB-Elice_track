@@ -8,8 +8,8 @@
 
 <body>
     <header>
-        <h1>💻주간,야간 반응형 웹사이트💻</h1>
-
+        <h1>💻주간,야간 적응형 웹 페이지💻</h1>
+        <div></div>
         <script>
             function 주간야간토글(self) {
                 let target = document.querySelector('body');
@@ -40,7 +40,7 @@
         <input type="button" value="토글(night)" onclick="주간야간토글(this);">
         <!-- <p>다크모드, 라이트모드 토글 버튼</p> -->
 
-        <input type="button" value="DarkMode" onclick="
+        <input id='dark' type="button" value="DarkMode" onclick="
                     document.querySelector('body').style.backgroundColor='black';
                     document.querySelector('body').style.color='white';
                     ">
@@ -60,11 +60,11 @@
             </ul>
         </nav>
         <article>
-            <h2>🔷 반응형 웹사이트에 오신것을 환영합니다!!</h2>
+            <h2>🔷 적응형 웹 페이지에 오신것을 환영합니다!!</h2>
             <p>
-                본 사이트는 Teachable Machine 사이트에 있는 학습 모델을 활용하여 주간과 야간에 맞게 사이트를 반응해주는 테스트 입니다.
+                본 사이트는 Teachable Machine 사이트에 있는 학습 모델을 활용하여 주간과 야간에 맞게 사이트 테마를 적용해주는 테스트 입니다.
                 웹캠으로 찍은 이미지를 학습시킨 모델로 주간과 야간일 확률값으로 분류해 사이트에 정해둔 테마를 Darkmode 와 Lightmode로 바꾸어 줍니다.
-                사용자의 노트북 웹캠 또는 카메라 장비를 사용하여 그에 맞는 환경에 맞게 변화를 주어 장기간 컴퓨터를 사용하는 현대인들의 피로도를 줄어 줄것으로 예상이됩니다.
+                사용자의 노트북 웹캠 또는 카메라 장비를 사용하여 사용자 환경에 맞게 변화를 주어 장기간 컴퓨터를 사용하는 현대인들의 피로도를 줄여 줄것으로 기대하고 있습니다.
             </p>
 
 
