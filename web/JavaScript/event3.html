@@ -1,0 +1,30 @@
+<html>
+<head>
+    <style>
+
+    </style>
+</head>
+<body>
+    <script>
+        for (let i = 0; i < 2400; i++) {
+            document.write(`<input type="button" onmouseover="
+            // alt 누를시애 색칠
+                if (event.altKey === true){
+                    event.target.style.backgroundColor='darkblue';
+                    // 지워지는것
+                    setTimeout(function(){
+                        event.target.style.backgroundColor='';
+                    }, 2000)
+                }
+            // ctrl 누를시에 색 지움
+                if (event.ctrlKey === true){
+                    event.target.style.backgroundColor='';
+                }
+
+
+            ">`);
+        }
+    </script>
+</body>
+
+</html>
