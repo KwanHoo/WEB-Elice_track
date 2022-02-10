@@ -1,0 +1,75 @@
+<script>
+    function timer(time) {
+        return new Promise(function (resolve) {
+            setTimeout(function () {
+                resolve(time);
+            }, time);
+        });
+    }
+    // <<< 비동기 방식 >>>
+    // console.time('timer');
+    // timer는 promise를 리턴함
+/*
+    timer(1000).then(function(){
+        console.log(1);
+    });
+
+    // 콜백 함수에 timer의 리턴값이 들어옴
+    timer(2000).then(function (time) {
+        // console.timeEnd('timer');
+        console.log('time:' + time);
+    });
+*/
+
+    // // 비동기를 동기적으로 => then~ then 끝난다음 
+/*
+    console.time('timer');
+    timer(1000)
+        .then(function(time){
+        console.log('time 1: ' + time);
+        return timer(time+1000);  // 프로미스를 리턴 2초후에 밑에 실행
+    }) .then(function(time){
+        console.log('time 2: ' + time);
+        return timer(time+1000)
+    }) .then(function(time){
+        console.timeEnd('timer');
+        console.log('time 3: '+time);
+    })
+*/
+
+// 위의 콜백 쓰기 싫어!! 
+// 비동기를 동기 처럼 async-await
+// !! await의 제약사항 : 항상 (async) 함수 안에서 사용해야함!!
+// async의 리턴은 Promise!!!!
+// 함수 앞에 async를 붙이면 함수는 자동으로 promise가 됨
+
+// .then과 awiat는 같은 기능을 하는데, 가독성을 높이기 위해 await를 쓰는 것임!!
+// await는 실행이 될때 까지 기다려줌!!
+
+    async function run(){
+        console.time('timer');
+        let time = await timer(1000);
+        console.log('time:' + time);
+        time = await timer(time + 1000);
+        console.log('time:' + time);
+        time = await timer(time + 1000);
+        console.log('time:' + time);
+        console.timeEnd('timer');
+    }
+    async function run2() {
+        console.log('start');
+        await run();
+        console.log('end');
+    }
+    // 1) 다시 async 함수로 묶어서 await
+    async function run3(){
+        console.log('parent start');
+        await run2();
+        console.log('parent end');
+    }
+    // 2) 프로미스 .then 으로 받아오는 방법
+    console.log('SETSETSET!!')
+    run3().then(function(){
+        console.log('CUTCUTCUT!!')
+    })
+</script>
