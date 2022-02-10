@@ -1,44 +1,102 @@
 <!doctype html>
 <html>
-    <head>
-        <title>WEB1</title>
-        <meta charset="utf-8">
-    </head>
-    <body>
-        <h1><a href="index.html" id="title">김관호의 포트폴리오!!!</a></h1>
 
-        <nav>
-            <ol></ol>
-        </nav>
-        <h2>welcome</h2>
-        <p>hello</p>
+<head>
+    <title>WEB1</title>
+    <meta charset="utf-8">
+</head>
 
-        <script>
-            let topics= [
-                {id:1, title:'html', body:'html is ...'},
-                {id:2, title:'css', body:'css is ...'},
-                {id:3, title:'js', body:'js is ...'}
-            ]
-            // 정공법 : 장황하다.
-            // let text = document.createTextNode('HTML');
-            // let a = document.createElement('a');
-            // a.setAttribute('href', '1.html');
-            // let li = document.createElement('li');
-            // a.appendChild(text);
-            // li.appendChild(a);
-            // document.querySelector('ol').appendChild(li);
+<body>
+    <header>
+        <h1><a href="index.html" onclick="
+      event.preventDefault();
+      mode = 'WELCOME';
+      Article();
+    ">WEB</a></h1>
+    </header>
+    <nav>
+        <ol>
+        </ol>
+    </nav>
+    <article>
+    </article>
+    <ul>
+        <li>
+            <a href="/create" onclick="
+                event.preventDefault();
+                mode = 'CREATE';
+                Article();
+            ">create</a>
+        </li>
+        <li>
+            <a href="/upate" onclick="
+                event.preventDefault();
+                mode = 'UPDATE'
+                Article();
+                ">update</a>
+        </li>
+    </ul>
+    <script>
+        let selectedId = 1;
+        let mode = 'CREATE';
+        let nextId = 3;
+        let topics = [
+            { id: 1, title: 'html', body: 'html is ..' },
+            { id: 2, title: 'css', body: 'css is ..' }
+        ]
 
-            // inner html이 더 편함
-            // document.querySelector('ol').innerHTML = <li><a href="/read/1">html</a></li>;
-            
-            function Nav(){
-            let liTag = '';
-                for(let i=0; i<topics.length; i++){
-                    liTag = liTag + `<li><a href="/read/${topics[i].id}">${topics[i].title}</a></li>`;
+        function Article() {
+            let articleTag = '';
+            if (mode === 'WELCOME') {
+                articleTag = `<h2>Welcome</h2>Hello WEB`;
+            } else if (mode === 'READ') {
+                for (let i = 0; i < topics.length; i++) {
+                    let t = topics[i];
+                    if (t.id === selectedId) {
+                        articleTag = `<h2>${t.title}</h2>${t.body}`;
+                    }
                 }
-                document.querySelector('ol').innerHTML = liTag;
+            } else if (mode === 'CREATE') {
+                articleTag = `
+                    <h2>Create</h2>
+                    <form onsubmit="
+                        event.preventDefault();
+                        let title = event.target.title.value;
+                        let body = event.target.body.value;
+                        topics.push({id:nextId, title:title, body:body});
+                        Nav();
+                        mode = 'READ';
+                        selectedId = nextId;
+                        Article();
+                        nextId = nextId + 1;
+                    ">
+                        <p><input type="text" placeholder="제목" name = "title"></p>
+                        <p><textarea placeholder="본문" name = 'body'></textarea></p>
+                        <p><input type='submit' value ='제출'></p>
+                    </form>
+                `;
+            } else if (mode === 'UPDATE') {
+                articleTag = 'UPDATE!!';
             }
-            Nav();
-        </script>
-    </body>
+            document.querySelector('article').innerHTML = articleTag;
+        }
+        Article();
+
+        function Nav() {
+            let liTag = '';
+            for (let i = 0; i < topics.length; i++) {
+                let t = topics[i];
+                liTag = liTag + `<li><a href="/read/${t.id}" onclick="
+          event.preventDefault();
+          mode = 'READ';
+          selectedId =  ${t.id};
+          Article();
+        ">${t.title}</a></li>`;
+            }
+            document.querySelector('nav>ol').innerHTML = liTag;
+        }
+        Nav();
+    </script>
+</body>
+
 </html>
