@@ -1,102 +1,181 @@
 <!doctype html>
 <html>
-
 <head>
-    <title>WEB1</title>
-    <meta charset="utf-8">
+  <title>WEB1</title>
+  <meta charset="utf-8">
 </head>
-
 <body>
-    <header>
-        <h1><a href="index.html" onclick="
+  <header>
+    <h1><a href="index.html" onclick="
       event.preventDefault();
       mode = 'WELCOME';
       Article();
     ">WEB</a></h1>
-    </header>
-    <nav>
-        <ol>
-        </ol>
-    </nav>
-    <article>
-    </article>
-    <ul>
+  </header>
+  <nav>
+    <ol>
+    </ol>
+  </nav>
+  <article>
+  </article>
+  <ul id="control">
+  </ul>
+  <script>
+    let selectedId = 1;
+    let mode = 'CREATE';
+    let nextId = 3;
+    let topics = [
+      {id:1, title:'html', body:'html is ..'},
+      {id:2, title:'css', body:'css is ..'}
+    ]
+    function Control(){
+      let contextUI =`
         <li>
-            <a href="/create" onclick="
-                event.preventDefault();
-                mode = 'CREATE';
-                Article();
-            ">create</a>
+          <a href="/create" onclick="
+            event.preventDefault();
+            mode = 'CREATE';
+            Article();
+          ">Create</a>
         </li>
-        <li>
-            <a href="/upate" onclick="
-                event.preventDefault();
-                mode = 'UPDATE'
-                Article();
-                ">update</a>
-        </li>
-    </ul>
-    <script>
-        let selectedId = 1;
-        let mode = 'CREATE';
-        let nextId = 3;
-        let topics = [
-            { id: 1, title: 'html', body: 'html is ..' },
-            { id: 2, title: 'css', body: 'css is ..' }
-        ]
 
-        function Article() {
-            let articleTag = '';
-            if (mode === 'WELCOME') {
-                articleTag = `<h2>Welcome</h2>Hello WEB`;
-            } else if (mode === 'READ') {
-                for (let i = 0; i < topics.length; i++) {
-                    let t = topics[i];
-                    if (t.id === selectedId) {
-                        articleTag = `<h2>${t.title}</h2>${t.body}`;
-                    }
-                }
-            } else if (mode === 'CREATE') {
-                articleTag = `
-                    <h2>Create</h2>
-                    <form onsubmit="
-                        event.preventDefault();
-                        let title = event.target.title.value;
-                        let body = event.target.body.value;
-                        topics.push({id:nextId, title:title, body:body});
-                        Nav();
-                        mode = 'READ';
-                        selectedId = nextId;
-                        Article();
-                        nextId = nextId + 1;
-                    ">
-                        <p><input type="text" placeholder="제목" name = "title"></p>
-                        <p><textarea placeholder="본문" name = 'body'></textarea></p>
-                        <p><input type='submit' value ='제출'></p>
-                    </form>
-                `;
-            } else if (mode === 'UPDATE') {
-                articleTag = 'UPDATE!!';
-            }
-            document.querySelector('article').innerHTML = articleTag;
+      `;
+        if(mode === 'READ'){
+          contextUI = contextUI + `
+            <li>
+              <a href="/update" onclick="
+                event.preventDefault();
+                mode = 'UPDATE';
+                Article();
+              ">Update</a>
+            </li>
+            <li>
+              <input type="button" value="delet" onclick="deleteHandler();">
+            </li>
+          `
         }
-        Article();
+      document.querySelector('#control').innerHTML = contextUI;
+    }
+    Control()
+    async function createHandler(event){
+      event.preventDefault();
+      let title = event.target.title.value;
+      let body = event.target.body.value;
+      //topics.push({id:nextId, title:title, body:body});
+      const response = await fetch('http://localhost:3000/topics', {
+        method: 'POST',
+        body: JSON.stringify({ title: title, body: body }),
+        headers: {
+          'Content-Type': 'application/json'
+        },
+      });
+      const topic = await response.json();
+      Nav();
+      mode = 'READ';
+      selectedId = topic.id;
+      Article();
+    }
+    async function updateHandler(event) {
+      event.preventDefault();
+      let title = event.target.title.value;
+      let body = event.target.body.value;
+      //topics.push({id:nextId, title:title, body:body});
+      const response = await fetch('http://localhost:3000/topics/' + selectedId, {
+        method: 'PUT',
+        body: JSON.stringify({ title: title, body: body }),
+        headers: {
+          'Content-Type': 'application/json'
+        },
+      });
+      const topic = await response.json();
+      Nav();
+      mode = 'READ';
+      selectedId = topic.id;
+      Article();
+    }
+    async function deleteHandler(event) {
+      const response = await fetch('http://localhost:3000/topics/' + selectedId, {
+        method: 'DELETE',
+      });
+      const topic = await response.json();
+      Nav();
+      mode = 'WELCOME';
+      Article();
+    }
+    
+    async function Article() {
+      let articleTag = '';
+      if (mode === 'WELCOME') {
+        articleTag = `<h2>Welcome</h2>Hello WEB`;
+      } else if (mode === 'READ') {
+        const response = await fetch('http://localhost:3000/topics/' + selectedId);
+        const topic = await response.json();
+        articleTag = `<h2>${topic.title}</h2>${topic.body}`;
+      } else if (mode === 'CREATE') {
+        articleTag = `
+        <h2>Create</h2>
+        <form onsubmit="
+          createHandler(event);
+        ">
+          <p><input type="text" placeholder="title" name="title"></p>
+          <p><textarea placeholder="body" name="body"></textarea></p>
+          <p><input type="submit" value="Create"></p>
+        </form>
+      `;
+      } else if (mode === 'UPDATE') {
+        const response = await fetch('http://localhost:3000/topics/' + selectedId);
+        const topic = await response.json();
+        articleTag = `
+        <h2>Update</h2>
+        <form onsubmit="
+          updateHandler(event);
+        ">
+          <p><input type="text" placeholder="title" name="title" value="${topic.title}"></p>
+          <p><textarea placeholder="body" name="body">${topic.body}</textarea></p>
+          <p><input type="submit" value="Update"></p>
+        </form>
+      `;
+      }
+      document.querySelector('article').innerHTML = articleTag;
+      Control()
+    }
+    Article();
 
-        function Nav() {
+/* //. then 코드 버전
+    function Nav() {
+        fetch('http://localhost:3000/topics').then(function (response) {
+            return response.json();
+        }).then(function (topics) {
             let liTag = '';
             for (let i = 0; i < topics.length; i++) {
                 let t = topics[i];
                 liTag = liTag + `<li><a href="/read/${t.id}" onclick="
-          event.preventDefault();
-          mode = 'READ';
-          selectedId =  ${t.id};
-          Article();
-        ">${t.title}</a></li>`;
+        event.preventDefault();
+        mode = 'READ';
+        selectedId =  ${t.id};
+        Article();
+      ">${t.title}</a></li>`;
             }
             document.querySelector('nav>ol').innerHTML = liTag;
-        }
-        Nav();
-    </script>
+        });
+    }
+*/  
+    // async await 버전
+    async function Nav() {
+      let response = await fetch('http://localhost:3000/topics');
+      let topics = await response.json();
+      let liTag = '';
+      for (let i = 0; i < topics.length; i++) {
+        let t = topics[i];
+        liTag = liTag + `<li><a href="/read/${t.id}" onclick="
+        event.preventDefault();
+        mode = 'READ';
+        selectedId =  ${t.id};
+        Article();
+      ">${t.title}</a></li>`;
+      }
+      document.querySelector('nav>ol').innerHTML = liTag;
+    }
+    Nav();
+  </script>
 </body>
-
 </html>
