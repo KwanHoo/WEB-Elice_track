@@ -1,28 +1,57 @@
-# Team 18
+# 🙋‍♂️우아한남매들🙋‍♀️ TEAM18 | FoodLog
 
-## 팀원 소개
-| 팀원 | 포지션 |
-|:----------:|:----------:|
-|김관호|프론트엔드|
-|노종찬|프론트엔드|
-|박상언|프론트엔드|
-|남혜민|백엔드|
-|선혜주|백엔드|
-|장준수|백엔드|
+<img width="1000" alt="Graph Page" src="https://user-images.githubusercontent.com/49335804/167678164-b8f63e66-4b03-4a8d-a88a-6581e876e554.png">
+
+<br>
+<br>
+
+이 프로젝트는 최근 건강에 대한 관심 증가와 불균형한 식습관 그리고 직관적이지 않고 과다한 영양정보 표시를 해결하기 위해 Kaggle의 Nutrition-details-for-most-common-foods 데이터를 분석하여 웹서비스로 해결하려는 프로젝트입니다. \
+웹 서비스 링크: ~~http://elice-kdt-ai-4th-team18.elicecoding.com/~~
 
 <br>
 
+## 팀원 소개
+
+|   팀원    |   포지션   |
+| :-------: | :--------: |
+| 👦 김관호 | 프론트엔드 |
+|  👱 NJC   | 프론트엔드 |
+|  👸 NHM   |   백엔드   |
+|  👧 SHJ   |   백엔드   |
+|  👨 JJS   |   백엔드   |
+
+<br>
+
+## 주요 사용 기술
+
+1. 프론트엔드
+
+- React
+- Axios
+- Apexcharts
+
+2. 백엔드
+
+- Express
+- Mongodb
+- docker
+- Amazon S3
+
+<br />
+<br />
+
 ## 협업 규칙
+
 #### **팀 회의**
 
-- 매일 오전 10시 스크럼 회의 
-매일 오후 6시 회고 - 디스코드로 내용공유
+- 매일 오전 10시 스크럼 회의
+  매일 오후 6시 회고 - 디스코드로 내용공유
 - 오전/오후 스크럼회의
 
 #### **커뮤니케이션**
 
 - 정해진 시간(10~18시)에는 디스코드 자주 확인하기
-    - 부득이한 경우, 꼭 사전에 이야기하기
+  - 부득이한 경우, 꼭 사전에 이야기하기
 - 디스코드/오픈카톡 알람 켜놓기
 
 #### **협업 문화**
@@ -38,8 +67,8 @@
 - 변수는 **camelCase**로 통일하기
 - **주석** 친절하게 달기
 - JS 스크립트 작성 규칙
-    - 화살표 함수
-    - Axios, aysnc/await 로 통일
+  - 화살표 함수
+  - Axios, aysnc/await 로 통일
 
 <br>
 
@@ -55,13 +84,3 @@
 
 <br>
 <br>
-
-## 참고
-#### 전체 개발 프로세스
-[1주차 진행 예시](https://www.notion.so/elice/1-913e840cf1164f6da40874f2f2d8447f)<br>
-[2주차 진행 예시](https://www.notion.so/elice/2-a60237f4cc6d42bca196efb981f14e88)<br>
-[3주차 진행 예시](https://www.notion.so/elice/3-c3d43a0d552f452eb3f31f34dcb56d45)<br>
-<br>
-#### 알면 좋은 개발 Tip
-[Swagger로 APi 문서 자동으로 만들기](https://www.notion.so/elice/Swagger-API-265bfca574b3438087cc9388e645a133)<br>
-[유용한 라이브러리/사이트](https://www.notion.so/elice/f29b68812f774b119dcaa712aaaac0fd)
