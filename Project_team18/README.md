@@ -7,7 +7,14 @@
 
 이 프로젝트는 최근 건강에 대한 관심 증가와 불균형한 식습관 그리고 직관적이지 않고 과다한 영양정보 표시를 해결하기 위해 Kaggle의 Nutrition-details-for-most-common-foods 데이터를 분석하여 웹서비스로 해결하려는 프로젝트입니다. \
 웹 서비스 링크: ~~http://elice-kdt-ai-4th-team18.elicecoding.com/~~
+블로그 포스팅 링크 : https://blog.naver.com/hwankko27/222728100333
 
+<br>
+
+Youtube link👇
+[![FoodLog_DEMO](https://img.youtube.com/vi/InNCuA4n1HI/0.jpg)](https://youtu.be/InNCuA4n1HI)
+
+<br>
 <br>
 
 ## 팀원 소개
