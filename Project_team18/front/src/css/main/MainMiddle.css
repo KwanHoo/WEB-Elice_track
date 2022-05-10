@@ -1,0 +1,87 @@
+.MainMiddleContainer {
+  background-color: #FFF5EC;
+  width: 105rem;
+  height: 31.25rem;
+
+}
+
+
+.MainMiddle {
+  background-color: #FFF5EC; 
+  width: 62.5rem;
+  height: 31.25rem;
+  margin: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+.middleBox1 {
+  width: 37.5rem;
+  height: 31.25rem;
+  font-size: 0.875rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.middleBox1-1 {
+  width: 18.75rem;
+  height: 15.625rem; 
+  
+
+}
+
+.row1 {
+  color: orange;
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 0.9375rem;
+}
+
+.row2 {
+  font-size: 1.125rem;
+  margin-bottom: 1.25rem;
+}
+
+.row3 {
+  font-size: 0.75rem;
+  margin-bottom: 0.3125rem;
+}
+
+.row4 {
+  font-size: 0.75rem;
+  margin-bottom: 1.25rem;
+}
+
+.row5 {
+  font-weight: bolder;
+}
+
+.row6 {
+  font-weight: bolder;
+}
+
+.row7 {
+  font-weight: bolder;
+}
+
+
+.middleBox2 {
+  flex: auto;
+  display: flex;
+  align-items: center;
+}
+
+.middleBox2-1 {
+  width: 18.75rem;
+  height: 15.625rem;
+  color: white
+}
+
+.middleBox2-1 img {
+  width: 100%;
+  height: 100%;
+  border-radius: 3mm;
+  object-fit: cover;
+}

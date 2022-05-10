@@ -1,0 +1,44 @@
+.bottomContainer {
+  width: 100%;
+  height: 10%; 
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.bottomContents {
+  width: 15rem;
+  height: 1rem;
+  text-align: center;
+  line-height: 60%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.searchPassword {
+  text-decoration: none;
+  color: #888897;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 0.5rem;
+  
+  
+}
+
+.searchId {
+  text-decoration: none;
+  color: #888897;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 0.5rem;
+  
+  
+}
+
+.registration {
+  text-decoration: none;
+  color: #888897;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 0.5rem;
+  
+}

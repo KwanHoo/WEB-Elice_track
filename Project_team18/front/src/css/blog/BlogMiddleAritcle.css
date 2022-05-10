@@ -1,0 +1,37 @@
+.mainTitle {
+  margin: 0;
+  background-color: #F2F2F2;
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 2rem;
+  font-weight: 800;
+}
+
+
+.blogMiddleArticleContainer {
+
+  width: auto;
+  height: 48%;
+  background-color: #F2F2F2;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.blogMiddleAritcleBox {
+
+  width: 60%;
+  height: 80%;
+  min-width: 56.5rem;
+  min-height: 30rem;
+  background-color: #F2F2F2;
+  padding: 0.625rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  
+}
+
+
+

@@ -1,0 +1,62 @@
+#teamInfo {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem auto;
+    animation-name: movingUp;
+    animation-duration: 0.9s;
+    animation-timing-function: ease;
+  }
+  @keyframes movingUp {
+    from {
+      opacity: 0.4;
+      margin-top: 2rem;
+    }
+    to {
+      opacity: 1;
+      margin-top: 1rem;
+    }
+  }
+  #teamInfo .members {
+    flex-direction: column;
+  }
+  #teamInfo ul {
+    display: flex;
+    margin: 10vh 0;
+  }
+  #teamInfo ul li {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+  #teamInfo ul li h2 {
+    font-size: x-large;
+    font-weight: bold;
+    margin-top: 10px;
+    margin-bottom: 5px;
+  }
+  #teamInfo .profilePic {
+    width: 10vw;
+    height: 10vw;
+    border-radius: 50%;
+  }
+  #teamInfo ul li div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5px;
+  }
+  #teamInfo ul li a {
+    text-decoration: none;
+    color: black;
+  }
+  #teamInfo ul li div img {
+    width: 30px;
+    height: 30px;
+    margin-right: 12px;
+  }
+  #teamInfo ul li .github img {
+    width: 25px;
+    height: 25px;
+    margin-right: 5px;
+  }
