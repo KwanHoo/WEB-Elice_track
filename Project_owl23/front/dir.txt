@@ -1,0 +1,26 @@
+>> front-project
+: 1주차 프로젝트 코드
+: project 작업
+: front-project 브랜치
+
+>> portfolio
+: certificate + front (JW님꺼머지)
+: front 브랜치
+
+>>frontTest
+: 1주차 리뷰 코드
+: award + project + certificate 합친거
+: front 브랜치
+
+>> devbranch
+: 1주차 front + back 코드 머지
+:dev branch
+
+>> dev-testcertificate
+: JW님 certificate back 코드 수정본
+:(3.24.) Create, Read, Update,
+: dev-test-certificate
+
+
+>> dev-tc-education
+: >> dev-testcertificate >> education 부분 작업
