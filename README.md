@@ -1,6 +1,6 @@
 # 엘리스 AI 기반 웹 풀스택 엔지니어 트랙
 - 기간 : 2022-01-11 ~ 2022-07-02
-- 교육 : 전산학 기초, 웹 프로그래밍, 데이터분석, 인고지능 이론
+- 교육 : 전산학 기초, 웹 프로그래밍, 데이터분석, 인공지능 이론
 
 
 ---
@@ -26,7 +26,7 @@
 
 
 ### 1-3_래시피 추천 웹 서비스 _ 오늘 뭐 먹지?
-- 기간 : 2022.06 ~ 2022.07
+- 기간 : 2022.06 ~ 2022.06
 - [작업 포스트](https://moriah-blog.tistory.com/entry/Pytorch-%EB%AA%A8%EB%8D%B8-ONNX-%ED%8C%8C%EC%9D%BC%EB%A1%9C-%EB%B3%80%ED%99%98-%EB%AA%A8%EB%8D%B8-%EC%84%9C%EB%B9%99)
 - [작업 포스트](https://moriah-blog.tistory.com/entry/ONNX-%ED%8C%8C%EC%9D%BC-onnx-runtime-%EC%8B%A4%ED%96%89%ED%95%98%EC%97%AC-%EB%AA%A8%EB%8D%B8-%EC%9C%A0%EC%B6%94%ED%95%98%EB%8A%94-%EB%B0%A9%EB%B2%95)
 
