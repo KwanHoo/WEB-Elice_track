@@ -11,7 +11,8 @@
 
 - 기간 : 2022.03 ~ 2022.03
 - [포스팅 링크](https://blog.naver.com/hwankko27/222685131466)
-  <img width="428" alt="owl" src="https://github.com/KwanHoo/CNU_Brightling/assets/49335804/476c0103-d2dd-4384-ad04-27e35a0289b0">
+
+<img width="428" alt="owl" src="https://github.com/KwanHoo/CNU_Brightling/assets/49335804/476c0103-d2dd-4384-ad04-27e35a0289b0">
 
 ---
 
@@ -21,7 +22,8 @@
 - [포스팅 링크](https://blog.naver.com/hwankko27/222728100333)
 - [작업 포스트](https://moriah-blog.tistory.com/entry/%EB%A6%AC%EC%95%A1%ED%8A%B8-%EC%B0%A8%ED%8A%B8-Recharts-%EC%82%AC%EC%9A%A9-%EB%B0%8F-%EC%84%A4%EC%B9%98-%EC%8B%9C-%EC%97%90%EB%9F%AC-%ED%95%B4%EA%B2%B0)
 - [작업 포스트](https://moriah-blog.tistory.com/entry/Rechartsjs-%EB%8D%B0%EC%9D%B4%ED%84%B0-%EB%B6%84%EC%84%9D-%EC%B0%A8%ED%8A%B8%EB%A1%9C-%EC%8B%9C%EA%B0%81%ED%99%94-%ED%95%98%EA%B8%B0-%EB%A6%AC%EC%95%A1%ED%8A%B8-%EA%B7%B8%EB%9E%98%ED%94%84)
-  <img width="918" alt="foodlog" src="https://github.com/KwanHoo/CNU_Brightling/assets/49335804/0f265913-37a9-41d4-9bd0-40411032535d">
+
+<img width="918" alt="foodlog" src="https://github.com/KwanHoo/CNU_Brightling/assets/49335804/0f265913-37a9-41d4-9bd0-40411032535d">
 
 ---
 
@@ -53,4 +55,5 @@
 
 - [리포지토리 링크](https://github.com/elice-02-study-01-algorithm/python)
 - [미팅 기록 링크](https://blog.naver.com/hwankko27/222645367691)
-  <img width="441" alt="cotemeet" src="https://github.com/KwanHoo/CNU_Brightling/assets/49335804/cb10cd5d-061e-4269-b4cd-677b5a9c98ae">
+
+<img width="441" alt="cotemeet" src="https://github.com/KwanHoo/CNU_Brightling/assets/49335804/cb10cd5d-061e-4269-b4cd-677b5a9c98ae">
